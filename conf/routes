@@ -1,0 +1,16 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET         /                               controllers.Assets.at(path="/public/html", file="vending-machine.html")
+
+# Vending machine operation
+GET         /vending-machine                controllers.VendingMachineController.show
+PUT         /vending-machine/payment        controllers.VendingMachineController.payment
+POST        /vending-machine/buy            controllers.VendingMachineController.buy
+POST        /vending-machine/refund         controllers.VendingMachineController.refund
+POST        /vending-machine/reset          controllers.VendingMachineController.reset
+
+# Map static resources from the /public folder to the /assets URL path
+GET         /assets/*file                   controllers.Assets.at(path="/public", file)
