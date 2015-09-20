@@ -3,9 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <title>自動販売機</title>
+    <link rel="stylesheet" href="/assets/stylesheets/vending-machine.css" />
 </head>
 <body>
-    <h1>自動販売機</h1>
+    <div>
+        <span>自販機</span>
+        <table>
+            <tr>
+                <th>投入金額</th>
+                <th>釣り銭</th>
+                <th>購入可能</th>
+            </tr>
+            <tr>
+                <td id="payment">?</td>
+                <td id="change">?</td>
+                <td id="lamp">?</td>
+            </tr>
+        </table>
+
+        <span>ジュース</span>
+        <table>
+            <tr>
+                <th>名前</th>
+                <th>価格</th>
+                <th>在庫数</th>
+            </tr>
+            <tr>
+                <td id="juice-name">?</td>
+                <td id="juice-price">?</td>
+                <td id="juice-stock">?</td>
+            </tr>
+        </table>
+    </div>
+
+    <span>操作</span>
+    <div>
+        <button class="insert-yen" data-value="1">1円</button>
+        <button class="insert-yen" data-value="5">5円</button>
+        <button class="insert-yen" data-value="10">10円</button>
+        <button class="insert-yen" data-value="50">50円</button>
+        <button class="insert-yen" data-value="100">100円</button>
+        <button class="insert-yen" data-value="500">500円</button>
+        <button class="insert-yen" data-value="1000">1000円</button>
+        <button class="insert-yen" data-value="2000">2000円</button>
+        <button class="insert-yen" data-value="5000">5000円</button>
+    </div>
+    <div>
+        <button class="operation-button" data-operation="buy-juice">購入</button>
+        <button class="operation-button" data-operation="refund">払い戻し</button>
+        <button class="operation-button" data-operation="reset">リセット</button>
+    </div>
+
     <script src="/assets/javascripts/jquery-1.9.0.min.js"></script>
     <script src="/assets/javascripts/vending-machine.js"></script>
 </body>
